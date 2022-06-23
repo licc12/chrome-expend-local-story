@@ -1,0 +1,39 @@
+{
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "img/icon.png",
+    "16": "img/icon.png",
+    "48": "img/icon.png"
+  },
+  "description": "对本地缓存Token进行拷贝、设置",
+
+  "manifest_version": 2,
+  "name": "Token",
+  "offline_enabled": true,
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "\u003Call_urls>",
+    "cookies",
+    "contextMenus",
+    "notifications",
+    "clipboardWrite",
+    "clipboardRead",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": [
+      "/lib/jquery-3.3.1.min.js",
+      "/lib/object-watch.js",
+      "/js/utils.js",
+      "/js/data.js",
+      "/js/background.js",
+      "/devtools/background-devtools.js"
+    ]
+  },
+  "version": "1.0.0"
+}
